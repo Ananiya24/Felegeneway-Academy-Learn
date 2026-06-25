@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BookOpen, MapPin, Phone, Mail, Menu, X, ArrowRight, Award, Heart, Shield, Lightbulb, ChevronRight, CheckCircle2 } from "lucide-react";
 import logo from "@assets/image_1782398612308.png";
 import heroImage from "@assets/image_1782399955786.png";
+import aboutImage from "@assets/image_1782400618970.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -93,8 +94,7 @@ function Hero() {
     <section className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-primary/75 z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/30 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-primary/20 z-10" />
         <img src={heroImage} alt="Felegeneway Academy Students" className="w-full h-full object-cover object-top" />
       </div>
 
@@ -172,7 +172,7 @@ function About() {
             className="relative"
           >
             <div className="absolute inset-0 bg-primary rounded-3xl transform translate-x-4 translate-y-4 opacity-10"></div>
-            <img src="/about-img.png" alt="Teacher and students" className="relative z-10 rounded-3xl shadow-2xl object-cover w-full h-[600px]" />
+            <img src={aboutImage} alt="Felegeneway Academy students with certificates" className="relative z-10 rounded-3xl shadow-2xl object-cover w-full h-[600px]" />
             
             {/* Floating Badge */}
             <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl z-20 max-w-[240px] border border-gray-100">
@@ -398,11 +398,11 @@ function Admissions() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-primary">First Name</label>
-                  <input type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all" placeholder="John" />
+                  <input type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all" placeholder="Abebe" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-primary">Last Name</label>
-                  <input type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all" placeholder="Doe" />
+                  <input type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all" placeholder="Kebede" />
                 </div>
               </div>
               <div className="space-y-2">
