@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "CTdxL0f5JcC3U8Sc3VxEl"
+uri = "file://artifacts/felegeneway/public/hero-bg.png"
+type = "image"
+title = "Prestigious Ethiopian school campus"
+
+[[generated]]
+id = "AMczTzp_kl_RAis2uhhFg"
+uri = "file://artifacts/felegeneway/public/about-img.png"
+type = "image"
+title = "Ethiopian teacher and students"
+
+[[generated]]
+id = "SZl2cIc7a7CU-ROgmJGQS"
+uri = "file://artifacts/felegeneway/public/programs-img.png"
+type = "image"
+title = "Students studying in library"
