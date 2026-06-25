@@ -63,7 +63,7 @@
   --secondary-foreground: 234 65% 30%;
   --muted: 210 20% 90%;
   --muted-foreground: 234 10% 40%;
-  --accent: 34 100% 50%; /* Flame Gold/Orange */
+  --accent: 213 90% 52%; /* Royal Blue */
   --accent-foreground: 0 0% 100%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
@@ -89,13 +89,13 @@
   --secondary-foreground: 210 20% 98%;
   --muted: 234 30% 20%;
   --muted-foreground: 210 20% 70%;
-  --accent: 34 100% 50%;
+  --accent: 213 90% 58%;
   --accent-foreground: 0 0% 100%;
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
   --border: 234 30% 20%;
   --input: 234 30% 20%;
-  --ring: 34 100% 50%;
+  --ring: 213 90% 52%;
 }
 
 @layer base {

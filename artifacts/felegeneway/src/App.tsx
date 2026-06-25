@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BookOpen, MapPin, Phone, Mail, Menu, X, ArrowRight, Award, Heart, Shield, Lightbulb, ChevronRight, CheckCircle2 } from "lucide-react";
 import logo from "@assets/image_1782398612308.png";
+import heroImage from "@assets/image_1782399955786.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -92,9 +93,9 @@ function Hero() {
     <section className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-primary/80 mix-blend-multiply z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent z-10" />
-        <img src="/hero-bg.png" alt="Campus" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-primary/75 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/30 z-10" />
+        <img src={heroImage} alt="Felegeneway Academy Students" className="w-full h-full object-cover object-top" />
       </div>
 
       <div className="container relative z-20 mx-auto px-6 md:px-12 text-center text-white">
@@ -106,7 +107,7 @@ function Hero() {
           
           <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold leading-[1.1] mb-6 drop-shadow-lg">
             Shaping Character.<br />
-            <span className="text-accent italic font-light">Igniting Intellect.</span>
+            <span className="text-white/80 italic font-light">Igniting Intellect.</span>
           </motion.h1>
           
           <motion.p variants={fadeInUp} className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
@@ -179,7 +180,7 @@ function About() {
                 <div className="w-3 h-3 bg-accent rounded-full animate-pulse"></div>
                 <span className="font-bold text-primary text-sm uppercase tracking-wider">Since 1998</span>
               </div>
-              <p className="text-sm text-muted-foreground font-medium">Decades of educational excellence in Addis Ababa.</p>
+              <p className="text-sm text-muted-foreground font-medium">Serving families in Lebu and across Addis Ababa.</p>
             </div>
           </motion.div>
         </div>
@@ -192,21 +193,27 @@ function Programs() {
   const programs = [
     {
       title: "Kindergarten",
-      age: "Ages 4-6",
-      desc: "A nurturing environment where curiosity is celebrated and foundational social, emotional, and cognitive skills are developed through play and structured discovery.",
-      color: "bg-blue-50 text-blue-700 border-blue-100"
+      age: "Ages 4–6",
+      desc: "A nurturing foundation where curiosity is celebrated and core social, emotional, and cognitive skills are developed through purposeful play and structured discovery.",
+      color: "bg-slate-100 text-slate-700 border-slate-200"
     },
     {
       title: "Primary School",
-      age: "Grades 1-6",
-      desc: "Building a robust academic foundation with a focus on critical thinking, literacy, numeracy, and an appreciation for Ethiopian culture and values.",
-      color: "bg-amber-50 text-amber-700 border-amber-100"
+      age: "Grades 1–8",
+      desc: "A comprehensive academic curriculum that builds strong literacy, numeracy, and critical thinking skills alongside a deep appreciation for Ethiopian heritage and values.",
+      color: "bg-blue-50 text-blue-800 border-blue-100"
     },
     {
       title: "Secondary School",
-      age: "Grades 7-12",
-      desc: "Rigorous academic preparation designed to shape independent thinkers ready for higher education and capable of leading with integrity.",
-      color: "bg-emerald-50 text-emerald-700 border-emerald-100"
+      age: "Grades 9–10",
+      desc: "Focused academic preparation aligned with the national curriculum, equipping students with the knowledge and discipline required for university entrance examinations.",
+      color: "bg-indigo-50 text-indigo-800 border-indigo-100"
+    },
+    {
+      title: "Preparatory",
+      age: "Grades 11–12",
+      desc: "Rigorous university preparatory education across natural and social science streams, mentored by experienced faculty committed to each student's highest potential.",
+      color: "bg-navy-50 text-primary border-primary/20"
     }
   ];
 
@@ -224,7 +231,7 @@ function Programs() {
           <p className="text-muted-foreground text-lg">We offer a seamless journey of learning that adapts to the developmental needs of your child at every stage.</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {programs.map((program, i) => (
             <motion.div 
               key={i}
@@ -272,7 +279,7 @@ function Stats() {
               transition={{ delay: i * 0.1, duration: 0.5 }}
               className="flex flex-col items-center justify-center"
             >
-              <div className="text-4xl md:text-6xl font-serif font-bold text-accent mb-2">{stat.value}</div>
+              <div className="text-4xl md:text-6xl font-serif font-bold text-white mb-2">{stat.value}</div>
               <div className="text-sm md:text-base font-medium tracking-wide text-white/80 uppercase">{stat.label}</div>
             </motion.div>
           ))}
@@ -370,7 +377,7 @@ function Admissions() {
                 "Receive admission decision"
               ].map((step, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <div className="w-8 h-8 rounded-full bg-accent/20 text-accent flex items-center justify-center font-bold text-sm border border-accent/30 shrink-0">
+                  <div className="w-8 h-8 rounded-full bg-white/10 text-white flex items-center justify-center font-bold text-sm border border-white/30 shrink-0">
                     {i + 1}
                   </div>
                   <span className="font-medium text-lg">{step}</span>
@@ -409,17 +416,18 @@ function Admissions() {
               <div className="space-y-2">
                 <label className="text-sm font-bold text-primary">Interested Grade Level</label>
                 <select className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all appearance-none">
-                  <option value="">Select Grade</option>
-                  <option value="kg">Kindergarten</option>
-                  <option value="primary">Primary (1-6)</option>
-                  <option value="secondary">Secondary (7-12)</option>
+                  <option value="">Select Level</option>
+                  <option value="kg">Kindergarten (Ages 4–6)</option>
+                  <option value="primary">Primary School (Grades 1–8)</option>
+                  <option value="secondary">Secondary School (Grades 9–10)</option>
+                  <option value="preparatory">Preparatory (Grades 11–12)</option>
                 </select>
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-bold text-primary">Message (Optional)</label>
                 <textarea rows={3} className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all resize-none" placeholder="How can we help you?"></textarea>
               </div>
-              <button className="w-full bg-accent hover:bg-accent/90 text-white font-bold py-4 rounded-xl transition-colors mt-4 shadow-lg shadow-accent/20">
+              <button className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl transition-colors mt-4 shadow-lg shadow-primary/30">
                 Submit Inquiry
               </button>
             </form>
@@ -515,7 +523,7 @@ function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-white/60 text-sm">
                 <MapPin className="w-5 h-5 text-accent shrink-0" />
-                <span>Bole Sub-city, Woreda 03<br/>Addis Ababa, Ethiopia</span>
+                <span>Lebu, Nifas Silk-Lafto<br/>Addis Ababa, Ethiopia</span>
               </li>
               <li className="flex items-center gap-3 text-white/60 text-sm">
                 <Phone className="w-5 h-5 text-accent shrink-0" />
